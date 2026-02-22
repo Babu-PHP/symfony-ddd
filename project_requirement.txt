@@ -1,0 +1,28 @@
+Mandatory Architecture Requirements
+Your solution must strictly follow the below technical requirements:
+Symfony 6/7
+PHP 8.2+
+Domain-Driven Design (DDD)
+CQRS
+Event-Driven Architecture
+Asynchronous Processing
+Caching Layer
+Optimized Read Models
+🧩 Task Requirement
+Using the above architecture requirements:
+
+1. Create a “Dashboard” model to display site data in a table format.
+The dataset should contain more than 1,00,000 records.
+Ensure the read model is optimized for performance.
+2. Add Unit Tests for the model.
+
+3. Implement at least ONE of the following:
+Logging strategy
+Monitoring hooks
+Performance measurement
+
+2. Include a README file explaining:
+Architecture decisions
+Setup instructions
+How to run the project
+How to execute unit tests
