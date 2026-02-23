@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dashboard {{ dashboardId }}{% endblock %}
+
+{% block body %}
+    <h1>Dashboard {{ dashboardId }}</h1>
+
+    <p>Showing All 10,000 records</p>
+    <p>Please <a href="{{ path('dashboard_records', {id: 123, page: 1}) }}">Click here </a>to show the records with pagination</p>
+
+    <table border="1" cellpadding="5">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Record</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %} {# show first 50 for demo #}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ record }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <p>Showing All 10,000 records</p>
+    <p>Please <a href="{{ path('dashboard_records', {id: 123, page: 1}) }}">Click here </a>to show the records with pagination</p>
+{% endblock %}

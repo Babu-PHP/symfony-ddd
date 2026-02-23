@@ -1,0 +1,22 @@
+framework:
+    router:
+        # Configure how to generate URLs in non-HTTP contexts, such as CLI commands.
+        # See https://symfony.com/doc/current/routing.html#generating-urls-in-commands
+        default_uri: '%env(DEFAULT_URI)%'
+    messenger: 
+        default_bus: messenger.bus.sync 
+        buses: 
+          messenger.bus.sync: ~ 
+          messenger.bus.async: ~ 
+        
+        transports: 
+          async: 
+            dsn: '%env(MESSENGER_TRANSPORT_DSN)%' 
+        
+        routing: 
+          'App\Dashboard\Domain\Event\DashboardCreated': async
+
+#when@prod:
+##    framework:
+###        router:
+####            strict_requirements: null
